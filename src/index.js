@@ -1,1 +1,3 @@
-import './styles.css';
+import './sass/main.scss';
+// import './js/pnotify';
+import './js/fetchImages';

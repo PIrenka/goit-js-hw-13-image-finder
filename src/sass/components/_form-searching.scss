@@ -1,0 +1,14 @@
+.search-form-container {
+  margin-top: 20px;
+}
+
+.form-control {
+  color: rgba(130, 163, 163, 0.993);
+  padding-left: 20px;
+  font-size: 30px;
+  outline: rgba(130, 163, 163, 0.705) solid 4px;
+}
+
+.form-control[placeholder='search for ...'] {
+  font-size: 45px;
+}
