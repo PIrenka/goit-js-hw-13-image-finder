@@ -1,9 +1,10 @@
-const searchForm = document.querySelector('.search-form');
-const galleryContainer = document.querySelector('.gallery');
+// const searchForm = document.querySelector('.search-form');
+// const galleryContainer = document.querySelector('.gallery');
 
-const galleryItem = document.querySelector('.gallery-item');
-const btnSearch = document.querySelector('.btn-search');
-const btnLoader = document.querySelector('.btn-loader');
+// const galleryItem = document.querySelector('.gallery-item');
+// const btnSearch = document.querySelector('.btn-search');
+// const btnLoader = document.querySelector('.btn-loader');
+import refs from './refs';
 
 import lightBox from './lightbox';
 import api from './apiService';
@@ -11,17 +12,17 @@ import updateImagesMarkup from '../js/update-image-markUp';
 import '../sass/main.scss';
 import infinityScroll from './scroll';
 
-searchForm.addEventListener('submit', searchFounder);
-btnSearch.addEventListener('click', searchFounder);
-btnLoader.addEventListener('click', fetchImage);
+refs.searchForm.addEventListener('submit', searchFounder);
+// refs.btnSearch.addEventListener('click', searchFounder);
+// refs.btnLoader.addEventListener('click', fetchImage);
 
 function searchFounder(event) {
   console.log('searchFounder');
 
   event.preventDefault();
   const form = event.currentTarget;
-  api.searchQuery = form.elements.query.value;
-  galleryContainer.innerHTML = '';
+  api.query = form.elements.query.value;
+  refs.galleryContainer.innerHTML = '';
   api.resetPage();
   form.reset();
   fetchImage();
@@ -29,10 +30,10 @@ function searchFounder(event) {
 }
 let scrollScr = false;
 function fetchImage() {
-  api.apiService().then(image => {
+  api.fetchImages().then(image => {
     updateImagesMarkup(image);
 
-    if (galleryContainer.childNodes.length > 0) {
+    if (refs.galleryContainer.childNodes.length > 0) {
       if (scrollScr) {
         window.scrollTo({
           top:

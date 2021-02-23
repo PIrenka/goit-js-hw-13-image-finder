@@ -19,5 +19,6 @@ export default function infinityScroll() {
     });
   };
   const observer = new IntersectionObserver(obs, options);
-  observer.observe(refs.galleryContainer.lastElementChild);
+  // observer.observe(refs.galleryContainer.lastElementChild);
+  observer.observe(refs.targetObserver.lastElementChild);
 }
