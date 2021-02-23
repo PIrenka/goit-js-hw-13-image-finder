@@ -14,31 +14,35 @@
   <div class="container">
 
     <div class="form-container">
-      <h1 class="title-section">HI! Please, enter the word/ds to search an image:</h1>
+      <h1 class="title-section">HI! Here you can find different images.</h1>
 
-      <form class="form-inline js-search-form">
-        <div class="form-group mx-sm-3 mb-2 search-form-container">
-          <label for="searchQuery" class="sr-only "></label>
-          <input type="text" class="form-control" name="query" id="searchQuery" placeholder="search for ..."
-            autocomplete="off" />
+      <!-- <form class="search-form" id="search-form">
+  <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+</form> -->
+
+
+
+      <form class="search-form">
+        <div class="form-group">
+          <label for="searchQuery" class="label-form ">Put your inquiry for searching:</label>
+          <input type="text" class="form-control" name="query" id="searchQuery" autocomplete="off"
+            placeholder="search for ..." />
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Search</button>
+        <button type="submit" class="btn btn-search">Search</button>
       </form>
 
     </div>
 
-    <ul class="articles js-articles"></ul>
+    <ul class="gallery">
+      <!-- Список <li> с карточками изображений -->
+    </ul>
 
-    <button type="button" class="btn btn-primary button" data-action="load-more">
+    <button type="button" class="btn btn-loader button" data-action="load-more">
       <span class="spinner-border spinner-border-sm spinner is-hidden" role="status" aria-hidden="true"></span>
 
       <span class="label">Load more</span>
     </button>
   </div>
-  <!-- <div class="title-section">
-    <h1>HI! Please, enter the word/ds to search an image:</h1>
-    <input type="text" name="image-searching" placeholder="i'm searching">
-  </div> -->
 
 </body>
 
