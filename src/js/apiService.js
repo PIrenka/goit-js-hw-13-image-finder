@@ -29,21 +29,3 @@ export default {
     this.searchQuery = value;
   },
 };
-//     return fetch(url)
-//       .then(res => res.json())
-//       .then(({ images }) => {
-//         this.page += 1;
-//         return images;
-//       })
-//       .catch(error => console.log(error));
-//   },
-//   resetPage() {
-//     this.page = 1;
-//   },
-//   get query() {
-//     return this.searchQuery;
-//   },
-//   set query(value) {
-//     this.searchQuery = value;
-//   },
-// };

@@ -1,4 +1,4 @@
-import imagesTpl from '../tamplates/gallery-item.hbs';
+import imagesTpl from '../templates/gallery-item.hbs';
 import refs from './refs';
 
 function updateImagesMarkup(hits) {

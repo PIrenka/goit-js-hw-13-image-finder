@@ -1,9 +1,3 @@
-// const searchForm = document.querySelector('.search-form');
-// const galleryContainer = document.querySelector('.gallery');
-
-// const galleryItem = document.querySelector('.gallery-item');
-// const btnSearch = document.querySelector('.btn-search');
-// const btnLoader = document.querySelector('.btn-loader');
 import refs from './refs';
 
 import lightBox from './lightbox';
@@ -13,8 +7,6 @@ import '../sass/main.scss';
 import infinityScroll from './scroll';
 
 refs.searchForm.addEventListener('submit', searchFounder);
-// refs.btnSearch.addEventListener('click', searchFounder);
-// refs.btnLoader.addEventListener('click', fetchImage);
 
 function searchFounder(event) {
   console.log('searchFounder');
